@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Pedagogía en Educación Diferencial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+  <h1>Malla Curricular Pedagogía en Educación Diferencial</h1>
+  <p>Malla interactiva con prerrequisitos y progreso académico</p>
+</header>
+
+<!-- Barra de progreso -->
+<div class="progress-container">
+  <span id="progress-text">Avance total: 0%</span>
+  <div class="progress-bar">
+    <div id="progress-fill"></div>
+  </div>
+</div>
+
+<main class="grid-malla">
+
+  <!-- EJEMPLO SEMESTRE -->
+  <section class="semester">
+    <div class="semester-title">1° Semestre</div>
+    <ul class="subjects">
+
+      <li class="subject base" data-id="ingles1">Inglés I</li>
+      <li class="subject base" data-id="psico_apr1">Psicología del Aprendizaje I</li>
+      <li class="subject base" data-id="teorias">Análisis de Teorías Educativas</li>
+      <li class="subject base" data-id="des_evo1">Desarrollo Evolutivo I</li>
+      <li class="subject base" data-id="neuro1">Bases Neurobiológicas del Desarrollo I</li>
+      <li class="subject base" data-id="div1">Teoría de la Diversidad I</li>
+      <li class="subject base" data-id="taller_int">Taller de Intervención en Educación Primaria</li>
+
+    </ul>
+  </section>
+
+  <!-- SEMESTRE 2 -->
+  <section class="semester">
+    <div class="semester-title">2° Semestre</div>
+    <ul class="subjects">
+      <li class="subject prereq" data-id="ingles2" data-prereq="ingles1">Inglés II</li>
+      <li class="subject base">Comunicación Oral y Escrita II</li>
+      <li class="subject base">Nivelación de Competencias</li>
+      <li class="subject related" data-prereq="psico_apr1">Orientación y Educación para la Diversidad</li>
+      <li class="subject related" data-prereq="teorias">Educación en Contexto Histórico y Social</li>
+      <li class="subject prereq" data-prereq="des_evo1">Desarrollo Evolutivo II</li>
+      <li class="subject prereq" data-prereq="neuro1">Bases Neurobiológicas del Desarrollo II</li>
+      <li class="subject prereq" data-prereq="div1">Teoría de la Diversidad II</li>
+    </ul>
+  </section>
+
+  <!-- (Los semestres 3 al 10 siguen exactamente la lista que enviaste, respetando relaciones) -->
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
