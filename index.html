@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Malla Pedagogía en Educación Diferencial</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Malla Pedagogía en Educación Diferencial</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
   <h1>Malla Curricular Pedagogía en Educación Diferencial</h1>
-  <p>Malla interactiva con prerrequisitos y progreso académico</p>
+  <p>Malla interactiva con prerrequisitos y ramos relacionados</p>
 </header>
 
 <!-- Barra de progreso -->
@@ -25,40 +24,119 @@
   </div>
 </div>
 
-<main class="grid-malla">
+<main class="grid">
 
-  <!-- EJEMPLO SEMESTRE -->
-  <section class="semester">
-    <div class="semester-title">1° Semestre</div>
-    <ul class="subjects">
+<!-- 1° SEMESTRE -->
+<section class="semester">
+<h3>1° Semestre</h3>
+<div class="ramo base" data-id="ing1">Inglés I</div>
+<div class="ramo base" data-id="psa1">Psicología del Aprendizaje I</div>
+<div class="ramo base" data-id="teorias">Análisis de Teorías Educativas</div>
+<div class="ramo base" data-id="dev1">Desarrollo Evolutivo I</div>
+<div class="ramo base" data-id="neuro1">Bases Neurobiológicas del Desarrollo I</div>
+<div class="ramo base" data-id="div1">Teoría de la Diversidad I</div>
+<div class="ramo certificable base" data-id="taller1">Taller de Intervención en Educación Primaria</div>
+</section>
 
-      <li class="subject base" data-id="ingles1">Inglés I</li>
-      <li class="subject base" data-id="psico_apr1">Psicología del Aprendizaje I</li>
-      <li class="subject base" data-id="teorias">Análisis de Teorías Educativas</li>
-      <li class="subject base" data-id="des_evo1">Desarrollo Evolutivo I</li>
-      <li class="subject base" data-id="neuro1">Bases Neurobiológicas del Desarrollo I</li>
-      <li class="subject base" data-id="div1">Teoría de la Diversidad I</li>
-      <li class="subject base" data-id="taller_int">Taller de Intervención en Educación Primaria</li>
+<!-- 2° SEMESTRE -->
+<section class="semester">
+<h3>2° Semestre</h3>
+<div class="ramo prereq" data-id="ing2" data-prereq="ing1">Inglés II</div>
+<div class="ramo other">Comunicación Oral y Escrita II</div>
+<div class="ramo other">Nivelación de Competencias</div>
+<div class="ramo related" data-prereq="psa1">Orientación y Educación para la Diversidad</div>
+<div class="ramo related" data-prereq="teorias">Educación en Contexto Histórico y Social</div>
+<div class="ramo prereq" data-id="dev2" data-prereq="dev1">Desarrollo Evolutivo II</div>
+<div class="ramo prereq" data-id="neuro2" data-prereq="neuro1">Bases Neurobiológicas del Desarrollo II</div>
+<div class="ramo prereq" data-id="div2" data-prereq="div1">Teoría de la Diversidad II</div>
+</section>
 
-    </ul>
-  </section>
+<!-- 3° SEMESTRE -->
+<section class="semester">
+<h3>3° Semestre</h3>
+<div class="ramo prereq" data-prereq="ing2">Inglés III</div>
+<div class="ramo related">Cultura Escolar y Valores</div>
+<div class="ramo prereq" data-prereq="neuro2">Neurociencias y Aprendizaje</div>
+<div class="ramo other">Psicología del Desarrollo</div>
+<div class="ramo base" data-id="lecto">Teoría y Desarrollo de la Lectoescritura</div>
+<div class="ramo base" data-id="logico">Pensamiento Lógico Matemático</div>
+</section>
 
-  <!-- SEMESTRE 2 -->
-  <section class="semester">
-    <div class="semester-title">2° Semestre</div>
-    <ul class="subjects">
-      <li class="subject prereq" data-id="ingles2" data-prereq="ingles1">Inglés II</li>
-      <li class="subject base">Comunicación Oral y Escrita II</li>
-      <li class="subject base">Nivelación de Competencias</li>
-      <li class="subject related" data-prereq="psico_apr1">Orientación y Educación para la Diversidad</li>
-      <li class="subject related" data-prereq="teorias">Educación en Contexto Histórico y Social</li>
-      <li class="subject prereq" data-prereq="des_evo1">Desarrollo Evolutivo II</li>
-      <li class="subject prereq" data-prereq="neuro1">Bases Neurobiológicas del Desarrollo II</li>
-      <li class="subject prereq" data-prereq="div1">Teoría de la Diversidad II</li>
-    </ul>
-  </section>
+<!-- 4° SEMESTRE -->
+<section class="semester">
+<h3>4° Semestre</h3>
+<div class="ramo related" data-prereq="teorias">Currículo</div>
+<div class="ramo other">Didáctica con TAC</div>
+<div class="ramo prereq" data-prereq="neuro2">Neuropsicolingüística</div>
+<div class="ramo prereq" data-prereq="psa1">Psicología del Aprendizaje II</div>
+<div class="ramo prereq" data-prereq="lecto">Evaluación de la Lectoescritura</div>
+<div class="ramo prereq" data-prereq="logico">Evaluación Área Lógico Matemática</div>
+<div class="ramo certificable related">Práctica Pedagógica de Observación</div>
+</section>
 
-  <!-- (Los semestres 3 al 10 siguen exactamente la lista que enviaste, respetando relaciones) -->
+<!-- 5° SEMESTRE -->
+<section class="semester">
+<h3>5° Semestre</h3>
+<div class="ramo prereq" data-prereq="teorias">Metodología de la Investigación I</div>
+<div class="ramo other">Evaluación</div>
+<div class="ramo other">Procesos Cognitivos e Inteligencias Múltiples</div>
+<div class="ramo prereq" data-prereq="psa2">Psicopatología Infanto Juvenil</div>
+<div class="ramo prereq" data-prereq="lecto">Estrategias en Dificultades de Lectoescritura</div>
+<div class="ramo prereq" data-prereq="logico">Estrategias en Dificultades Lógico Matemática</div>
+<div class="ramo certificable related">Práctica Pedagógica de Ayudantía</div>
+</section>
+
+<!-- 6° SEMESTRE -->
+<section class="semester">
+<h3>6° Semestre</h3>
+<div class="ramo prereq" data-prereq="met1">Metodología de la Investigación II</div>
+<div class="ramo other">Gestión y Proyectos</div>
+<div class="ramo other">Desarrollo de Habilidades Tecnológicas</div>
+<div class="ramo other">Psicología de las Relaciones Familiares</div>
+<div class="ramo prereq" data-id="ade1">Adecuaciones Curriculares I</div>
+<div class="ramo other">Didáctica en la NEE</div>
+<div class="ramo certificable related">Práctica de Evaluación e Intervención I</div>
+</section>
+
+<!-- 7° SEMESTRE -->
+<section class="semester">
+<h3>7° Semestre</h3>
+<div class="ramo prereq" data-prereq="met2">Seminario de Graduación I</div>
+<div class="ramo other">Estudio de Caso</div>
+<div class="ramo prereq" data-prereq="ade1">Adecuaciones Curriculares II</div>
+<div class="ramo other">Trabajo Colaborativo y Co-Enseñanza I</div>
+<div class="ramo other">Taller de Evaluación Multidisciplinaria</div>
+<div class="ramo certificable related">Práctica de Evaluación e Intervención II</div>
+</section>
+
+<!-- 8° SEMESTRE -->
+<section class="semester">
+<h3>8° Semestre</h3>
+<div class="ramo prereq" data-prereq="sem1">Seminario de Graduación II</div>
+<div class="ramo related">Desarrollo Profesional I</div>
+<div class="ramo other">Registro de Evaluación y Planificación</div>
+<div class="ramo prereq" data-id="saac1">SAAC I – Lengua de Señas</div>
+<div class="ramo prereq" data-prereq="colab1">Trabajo Colaborativo y Co-Enseñanza II</div>
+<div class="ramo certificable related">Práctica de Evaluación e Intervención III</div>
+</section>
+
+<!-- 9° SEMESTRE -->
+<section class="semester">
+<h3>9° Semestre</h3>
+<div class="ramo other">Nivelación Pedagógica</div>
+<div class="ramo prereq">Desarrollo Profesional II</div>
+<div class="ramo other">Nivelación de Especialidad</div>
+<div class="ramo prereq" data-prereq="saac1">SAAC II – Lengua de Señas y Braille</div>
+<div class="ramo other">Inclusión y NEE</div>
+<div class="ramo certificable related">Práctica de Evaluación e Intervención IV</div>
+</section>
+
+<!-- 10° SEMESTRE -->
+<section class="semester">
+<h3>10° Semestre</h3>
+<div class="ramo prereq">Tesis de Grado</div>
+<div class="ramo certificable prereq">Práctica Profesional</div>
+</section>
 
 </main>
 
